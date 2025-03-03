@@ -15,8 +15,10 @@ Conduct an hyperparameter search and visualize the model's performance across di
 Performed EDA, feature engineering, hyperparameter tuning, and visualizations to optimize model performance. (Food_delivery.ipynb) <br>
 Raw data (train.csv) <br>
 ## Summary :
-We have a dataframe with 46000 labels and 20 features (one to predict)
+We worked with a dataset containing 46,000 labels and 20 features, including the target variable. Some features had incorrect data types, and there were approximately 900 missing values across the features, which we addressed using the KNNImputer. We created additional columns from existing ones to extract relevant information. By analyzing feature correlation and using feature importance from a random forest model, we narrowed down the selection to 11 features. <br>
+Next, we trained both a random forest and XGBoost model, applying basic hyperparameter tuning to determine the better option. We employed various visualization techniques, such as parallel coordinate plots and heatmaps, to evaluate model performance, checking for overfitting or underfitting and optimizing the hyperparameters accordingly. Ultimately, we chose XGBoost for our final model and proceeded with extensive hyperparameter tuning to improve performance.
+ 
 
 ## Results
-
+The best model was a XGBoost with hyperparameters {'learning_rate': 0.045, 'max_depth': 10, 'min_child_weight': 10, 'reg_lambda': 100}, and $R^2 = 0.821$
 
